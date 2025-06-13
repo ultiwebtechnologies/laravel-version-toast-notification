@@ -1,0 +1,27 @@
+{
+  "name": "ultiwebtechnologies/laravel-version-toast-notification",
+  "description": "A Laravel package to display a Bootstrap toast when a new version is available.",
+  "type": "library",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "UltiwebTechnologies\\VersionToast\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "UltiwebTechnologies\\VersionToast\\VersionToastServiceProvider"
+      ]
+    }
+  },
+  "require": {
+    "php": ">=8.0",
+    "illuminate/support": "^9.0|^10.0"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "UltiwebTechnologies\\VersionToast\\Console\\InstallCommand::handle"
+    ]
+  }
+}
